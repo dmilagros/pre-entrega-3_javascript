@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora de Préstamos</title>
+</head>
+
+<body>
+	<h1 style="text-align: center;">Calculadora de Préstamos</h1>
+	<section style="display: flex; justify-content: flex-start; gap: 30px;">
+		<div style="width: 50%; min-width: 400px;">
+			<div style="background: aliceblue; padding: 10px; margin: 10px 0;">
+				<h2>Calculadora</h2>
+			</div>
+			<div
+				style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; justify-items: stretch; gap: 10px; width: 400px;">
+				<label for="importe">Importe solicitado:</label>
+				<input type="number" id="importe" placeholder="Ingrese el importe">
+
+
+				<label for="interes">Porcentaje de interés (sin %):</label>
+				<input type="number" id="interes" placeholder="Ingrese el interés">
+
+
+				<label for="periodo">Duración en meses:</label>
+				<input type="number" id="periodo" placeholder="Ingrese el periodo en meses">
+			</div>
+
+			<br>
+			<br>
+
+			<button onclick="calcularPrestamo()">Calcular</button>
+		</div>
+		<div style="width: 50%; min-width: 400px;">
+			<div style="background: aliceblue; padding: 10px; margin: 10px 0;">
+				<h2>Detalles del Préstamo</h2>
+			</div>
+			<p id="resultado"></p>
+		</div>
+	</section>
+
+	<div style="background: aliceblue; padding: 10px; margin: 10px 0;">
+		<h2>Historial de Préstamos</h2>
+	</div>
+	<section id="historial" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;"></section>
+
+	<script src="./js/app.js"></script>
+</body>
+
+
+</html>
